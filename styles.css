@@ -50,8 +50,53 @@ body {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
+.swatch {
+  height: 132px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+.primary {
+  background: #3854E8;
+  color: #F5F5EF;
+}
 
+.secondary {
+  background: #C8E4CD;
+}
+
+.accent {
+  background: #F3A16B;
+}
+
+.background {
+  background: #F5F5EF;
+  border: 1px solid #D8DBD0;
+}
+
+.text-colour {
+  background: #202520;
+  color: #F5F5EF;
+}
+
+.colour-card p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.swatch small {
+  font-size: 10px;
+}
+
+.colour-card p small {
+  font-size: 10px;
+  color: #62685F;
+}
 
 .Top-Menu-Bar {
   display:flex;
