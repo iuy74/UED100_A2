@@ -1,7 +1,29 @@
-.TrustedBanner {
+html {
+  font-family: arial, sans-serif;
+}
 
+
+
+.TrustedBanner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 24px;
+
+}
+
+.TrustedBanner img{
+  width: 50px;
+  height: 48px;
+  object-fit: contain;
 }
 
 #interact-colour {
-  color: rainbow;
+  color: #202520;
+  font: arial;
+
 }
+
+
