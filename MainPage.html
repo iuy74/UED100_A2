@@ -11,24 +11,27 @@
       <header id="HeadIcon"> Coolors.co </header>
       <nav>
         <a href="./MainPage.html"> Introduction </a>
-        <a href="Generator.html"> Colour palette generator </a>
+        <a href="#generator"> Colour palette generator </a>
       </nav>
     </div>
+    <!-- Hero Section start -->
     <main>   
       <section class="hero">
         <div>
           <h1> A super fast color palettes generator</h1>
-            <p> Coolors is a <strong id="interact-colour" >super</strong> fast color pallete generator </p>
+            <p> Coolors is a <strong id="interact-colour" >super</strong> fast color palette generator </p>
             <p> Built to deliver visual inspiration to designers and alike, all at the press of a button</p>
           <h2> Trusted by 8+ Million creative minds and top companies</h2>
         </div>
         <div class="hero-preview" aria-hidden="true"></div>
       </section>
-      <section class="palette">
+      <!-- JavaScript still to be added this is the palette generator section -->
+      <button type="button" id="generate-palette">Generate palette</button>
+      <section class="palette" id="generator" aria-label="Colour palette generator">
           <div class="colour-card">
            <div class="swatch primary">
               <small>PRIMARY</small>
-              <span>#3854E8</span>
+              <button type="button" class="copy-hex" aria-label="Copy primary colour #3854E8">#3854E8</button>
           </div>
             <p>Electric blue <small>01</small></p>
            </div>
@@ -36,7 +39,7 @@
         <div class="colour-card">
           <div class="swatch secondary">
             <small>SECONDARY</small>
-            <span>#C8E4CD</span>
+            <button type="button" class="copy-hex" aria-label="Copy secondary colour #C8E4CD">#C8E4CD</button>
           </div>
             <p>Soft sage <small>02</small></p>
           </div>
@@ -44,7 +47,7 @@
         <div class="colour-card">
           <div class="swatch accent">
             <small>ACCENT</small>
-            <span>#F3A16B</span>
+            <button type="button" class="copy-hex" aria-label="Copy accent colour #F3A16B">#F3A16B</button>
           </div>
           <p>Apricot <small>03</small></p>
         </div>
@@ -52,7 +55,7 @@
         <div class="colour-card">
           <div class="swatch background">
             <small>BACKGROUND</small>
-            <span>#F5F5EF</span>
+            <button type="button" class="copy-hex" aria-label="Copy background colour #F5F5EF">#F5F5EF</button>
           </div>
           <p>Warm white <small>04</small></p>
         </div>
@@ -60,12 +63,14 @@
         <div class="colour-card">
           <div class="swatch text-colour">
             <small>TEXT</small>
-            <span>#202520</span>
+            <button type="button" class="copy-hex" aria-label="Copy text colour #202520">#202520</button>
           </div>
-          <p>Forest ink <small>05</small></p>      <footer> Coolors </footer>
-      <footer> Coolors Colour Palettes</footer>
+          <p>Forest ink <small>05</small></p>
         </div>
       </section>
+      <p id="palette-status" role="status"></p>
+
+    <!-- Banner showing trusted companies that use this site, needs JS for movement -->
     </main>
     <div class="TrustedBanner">
       <img src="srcimg/slack.png" alt="slack logo">
@@ -78,7 +83,7 @@
       <img src="srcimg/Netflix.png" alt="Netlfix Logo">
      <img src="srcimg/NewYorkTimes.png" alt="New York Times Logo"> 
     </div>
-     <a href ="./generator.html" id="start-gen">Start generator</a>
+     <a href="#generator" id="start-gen">Start generator</a>
    <footer class="site-footer">
      <span>Coolors</span>
      <span>Coolors Colour Palette</span>

@@ -5,6 +5,7 @@ body {
   padding: 0 64px;
   background: #F5F5EF;
   color: #202520;
+  font-family: Arial, sans-serif;
 
 }
 
@@ -127,8 +128,60 @@ body {
 
 #interact-colour {
   color: #202520;
-  font: arial;
+}
 
+.copy-hex {
+  align-self: flex-start;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.copy-hex:hover {
+  text-decoration: underline;
+}
+
+#generate-palette,
+#start-gen {
+  display: inline-block;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: #3854E8;
+  color: #FFFFFF;
+  font: inherit;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#generate-palette {
+  margin-bottom: 20px;
+}
+
+#generate-palette:hover,
+#start-gen:hover {
+  background: #293FC4;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #202520;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #FFFFFF;
+}
+
+#palette-status {
+  min-height: 1.5em;
+  line-height: 1.5;
 }
 
 .site-footer {
