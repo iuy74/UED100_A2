@@ -41,7 +41,7 @@ function HexMatch (hexcode){
 
 }
 
-function copyHex (hex) {
+async function copyHex (hex) {
 const status = document.querySelector("#palette-status");
 
   try {
@@ -51,7 +51,7 @@ const status = document.querySelector("#palette-status");
     status.textContent = "Content, couldn't copy try again or manually select"
   }
   }
-}
+
 
 function hexAppend (hex){
 
