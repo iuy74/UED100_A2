@@ -5,17 +5,23 @@
     <title> Coolors Colour Generator</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- resizing for mobile devices -->
+    <script src="javascript.js"></script>
+    <script src="dist/app.js" defer> </script>
   </head>
+
   <body>
+    
     <div class="Top-Menu-Bar">
       <header id="HeadIcon"> Coolors.co </header>
       <nav>
         <a href="./MainPage.html"> Introduction </a>
         <a href="#generator"> Colour palette generator </a>
       </nav>
+
     </div>
     <!-- Hero Section start -->
     <main>   
+      
       <section class="hero">
         <div>
           <h1> A super fast color palettes generator</h1>
@@ -24,32 +30,32 @@
           <h2> Trusted by 8+ Million creative minds and top companies</h2>
         </div>
         <div class="hero-preview" aria-hidden="true"></div>
-      </section>
+     </section>
       <!-- JavaScript still to be added this is the palette generator section -->
       <button type="button" id="generate-palette">Generate palette</button>
       <section class="palette" id="generator" aria-label="Colour palette generator">
-          <div class="colour-card">
+        <div class="colour-card">
            <div class="swatch primary">
               <small>PRIMARY</small>
               <button type="button" class="copy-hex" aria-label="Copy primary colour #3854E8">#3854E8</button>
           </div>
-            <p>Electric blue <small>01</small></p>
-           </div>
+            <p id="colour-name">Electric blue <small>01</small></p>
+        </div>
 
         <div class="colour-card">
           <div class="swatch secondary">
             <small>SECONDARY</small>
             <button type="button" class="copy-hex" aria-label="Copy secondary colour #C8E4CD">#C8E4CD</button>
           </div>
-            <p>Soft sage <small>02</small></p>
-          </div>
+            <p id="colour-name">Soft sage <small>02</small></p>
+        </div>
 
         <div class="colour-card">
           <div class="swatch accent">
             <small>ACCENT</small>
             <button type="button" class="copy-hex" aria-label="Copy accent colour #F3A16B">#F3A16B</button>
           </div>
-          <p>Apricot <small>03</small></p>
+          <p id="colour-name">Apricot <small>03</small></p>
         </div>
 
         <div class="colour-card">
@@ -57,7 +63,7 @@
             <small>BACKGROUND</small>
             <button type="button" class="copy-hex" aria-label="Copy background colour #F5F5EF">#F5F5EF</button>
           </div>
-          <p>Warm white <small>04</small></p>
+          <p id="colour-name">Warm white <small>04</small></p>
         </div>
 
         <div class="colour-card">
@@ -65,7 +71,7 @@
             <small>TEXT</small>
             <button type="button" class="copy-hex" aria-label="Copy text colour #202520">#202520</button>
           </div>
-          <p>Forest ink <small>05</small></p>
+          <p id="colour-name">Forest ink <small>05</small></p>
         </div>
       </section>
       <p id="palette-status" role="status"></p>
