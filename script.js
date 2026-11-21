@@ -33,13 +33,10 @@ function generatePalette (){
 
     swatch.style.backgroundColor = hex;
     hexButton.textContent = hex;
+    hexButton.setAttribute("aria-label",`Copy colour ${hex}`);
 
   });
  }
-
-function HexMatch (hexcode){
-
-}
 
 async function copyHex (hex) {
 const status = document.querySelector("#palette-status");
@@ -52,7 +49,4 @@ const status = document.querySelector("#palette-status");
   }
   }
 
-
-function hexAppend (hex){
-
-}
+main();
