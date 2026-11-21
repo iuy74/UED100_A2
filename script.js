@@ -14,13 +14,22 @@ const generateButton = document.querySelector("#generate-palette");
 
 function rgbhex () {
   const randomInt = Math.floor(Math.random() * 16777215);
-  return `#${randomInt(16).toString.padStart(6, '0')}`;
+  return `#${randomInt.toString(16).padStart(6, "0")}`;
 }
 
-function generatePalette (primary, secondary, accent, background,text){
- 
-  document.querySelector("")
-}
+function generatePalette (){
+ const cards = document.querySelectorAll(".colour-card");
+  
+  cards.forEach(card =>{
+    const hex = rgbhex();
+    const swatch = card.querySelector(".swatch");
+    const hexButton = card.querySelector(".copy-hex");
+
+    swatch.style.backgroundColor = hex;
+    hexButton.textContent = hex;
+
+  });
+ }
 
 function HexMatch (hexcode){
 
