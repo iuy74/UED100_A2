@@ -9,7 +9,13 @@
 
 function main() {
 const generateButton = document.querySelector("#generate-palette");
-  generateButton.addEventListener("click",generatePalette)
+generateButton.addEventListener("click",generatePalette)
+document.querySelectorAll(".copy-hex").forEach(button =>{
+    button.addEventListener("click", () =>{
+    copyHex(button.textContent.tirm());
+    })
+  })
+
 }
 
 function rgbhex () {
@@ -35,8 +41,16 @@ function HexMatch (hexcode){
 
 }
 
-function copyHex (Hex) {
+function copyHex (hex) {
+const status = document.querySelector("#palette-status");
 
+  try {
+    await navigator.clipboard.writeText(hex);
+    status.textContent = `Copied ${hex}`;
+  } catch (error) {
+    status.textContent = "Content, couldn't copy try again or manually select"
+  }
+  }
 }
 
 function hexAppend (hex){
