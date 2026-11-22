@@ -1,5 +1,2 @@
 node_modules/
 *.docx
-/package.json
-/package-lock.json
-/dist/
