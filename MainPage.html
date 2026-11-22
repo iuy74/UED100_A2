@@ -5,8 +5,8 @@
     <title> Coolors Colour Generator</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- resizing for mobile devices -->
-    <script src="script.js"></script>
-    <script src="dist/app.js" defer> </script>
+    <!-- Browser bundle includes our JavaScript and the colour-naming library. -->
+    <script src="dist/app.js" defer></script>
   </head>
 
   <body>
@@ -27,11 +27,10 @@
           <h1> A super fast color palettes generator</h1>
             <p> Coolors is a <strong id="interact-colour" >super</strong> fast color palette generator </p>
             <p> Built to deliver visual inspiration to designers and alike, all at the press of a button</p>
-          <h2> Trusted by 8+ Million creative minds and top companies</h2>
         </div>
         <div class="hero-preview" aria-hidden="true"></div>
      </section>
-      <!-- JavaScript still to be added this is the palette generator section -->
+      <!-- Generate new swatch colours and their nearest colour names. -->
       <button type="button" id="generate-palette">Generate palette</button>
       <section class="palette" id="generator" aria-label="Colour palette generator">
         
@@ -53,7 +52,7 @@
           </div>
           <p>
             <span class="colour-name">Soft sage </span>
-            <small>02</symall>
+            <small>02</small>
           </p>
         </div>
 
@@ -94,6 +93,8 @@
 
     <!-- Banner showing trusted companies that use this site, needs JS for movement -->
     </main>
+    <h1> Trusted by 8+ Million creative minds and top companies</h2>
+
     <div class="TrustedBanner">
       <img src="srcimg/slack.png" alt="slack logo">
       <img src="srcimg/Disney.png" alt="Disney Logo">

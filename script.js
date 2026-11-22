@@ -1,25 +1,18 @@
-/* PSEUDOCODE
- * When the user clicks button with #generate-palette selector
- * Randomise the colour of each colour block with the .swatch selector
- * Pick a random colour from .
-* The colours hexcode is displayed on the copy-hex class selector
-* The hexcode communicates with color namer package, and replaces the colour-name selector p with the packages name.
-* the hexcode is copyable with the .copy-hex selector */
-
+import namer from "color-namer";
 
 function main() {
 const generateButton = document.querySelector("#generate-palette");
 generateButton.addEventListener("click",generatePalette)
 document.querySelectorAll(".copy-hex").forEach(button =>{
     button.addEventListener("click", () =>{
-    copyHex(button.textContent.tirm());
+    copyHex(button.textContent.trim());
     })
   })
 
 }
 
 function rgbhex () {
-  const randomInt = Math.floor(Math.random() * 16777215);
+  const randomInt = Math.floor(Math.random() * 16777216);
   return `#${randomInt.toString(16).padStart(6, "0")}`;
 }
 
@@ -35,7 +28,11 @@ function generatePalette (){
     hexButton.textContent = hex;
     hexButton.setAttribute("aria-label",`Copy colour ${hex}`);
 
+    // Update only the name, leaving the card number unchanged.
+    card.querySelector(".colour-name").textContent = colourName(hex);
+
   });
+  document.querySelector("#palette-status").textContent = "New palette generated.";
  }
 
 async function copyHex (hex) {
@@ -48,5 +45,9 @@ const status = document.querySelector("#palette-status");
     status.textContent = "Content, couldn't copy try again or manually select"
   }
   }
+
+function colourName(hex) {
+  return namer(hex, { pick: ["ntc"] }).ntc[0].name;
+}
 
 main();

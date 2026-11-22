@@ -1,11 +1,12 @@
 
 
-body {
+body{
   margin: 0;
   padding: 0 64px;
   background: #F5F5EF;
   color: #202520;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
+  
 
 }
 
